@@ -1,7 +1,15 @@
 # Experiment 6 – Configure JPA & Hibernate with MySQL
 
 ## Objective
-Configure JPA & Hibernate with MySQL to model entity relationships and execute queries.
+Configure JPA & Hibernate with MySQL/PostgreSQL to model entity relationships and execute queries.
+
+## 📋 Experiment Requirements
+
+**a)** Configure database connectivity in `application.properties` and create a simple JPA entity with a corresponding repository.
+
+**b)** Model One-to-Many and Many-to-Many relationships (e.g., User–Role, Category–Product) and fetch related data using JPA.
+
+**c)** Write custom JPQL queries to filter, sort, and paginate records (e.g., products by price range, users by role), and analyze generated SQL.
 
 ## What This Project Covers
 
@@ -71,3 +79,22 @@ The application will:
 - Spring Data JPA (Hibernate)
 - MySQL
 - Maven
+
+## Output
+The application runs in console mode and displays:
+- ✅ Entity creation and saving
+- ✅ Relationship mappings (One-to-Many, Many-to-Many)
+- ✅ Custom JPQL query results
+- ✅ Pagination examples
+- ✅ All Hibernate-generated SQL queries
+
+## Database Schema
+The application automatically creates these tables:
+- `users` (id, name, email)
+- `roles` (id, role_name)
+- `user_roles` (user_id, role_id) - Join table for Many-to-Many
+- `categories` (id, category_name)
+- `products` (id, product_name, price, category_id)
+
+## Author
+**Kartik** - [GitHub](https://github.com/Kartikxdboii)
